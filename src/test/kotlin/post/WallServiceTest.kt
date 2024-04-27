@@ -13,7 +13,7 @@ class WallServiceTest {
     val original = Post(
         id = 10,
         ownerId = 10,
-        fromId = 10,
+        fromId = null,
         text = "Test",
         postType = "Test",
         canPin = true,
