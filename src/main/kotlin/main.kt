@@ -19,7 +19,8 @@ fun main() {
         canEdit = true,
         isPinned = true,
         likes = Likes(15),
-        date = currentDate
+        date = currentDate,
+        attachments = null
     )
     WallService.add(original)
 }
