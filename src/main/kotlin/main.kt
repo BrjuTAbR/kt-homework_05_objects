@@ -1,12 +1,28 @@
-import post.Likes
-import post.Post
-import post.WallService
+import post.*
 import java.util.*
 
 fun main() {
 
     val date = Date()
     val currentDate = date.time
+
+    val audio = Audio(
+        id = 1,
+        ownerId = 2,
+        title = "title",
+        url = "",
+        date = 0,
+        artist = null,
+        duration = 120,
+        lyricsId = null,
+        description = null,
+        genreId = null,
+        noSearch = true,
+        isHQ = true,
+        albumId = null
+    )
+
+    val audioAttachment = AudioAttachment(attachment = audio)
 
     val original = Post(
         id = 10,
@@ -19,7 +35,8 @@ fun main() {
         canEdit = true,
         isPinned = true,
         likes = Likes(15),
-        date = currentDate
+        date = currentDate,
+        attachments = arrayListOf(audioAttachment)
     )
     WallService.add(original)
 }

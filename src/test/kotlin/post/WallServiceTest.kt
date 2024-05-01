@@ -21,7 +21,8 @@ class WallServiceTest {
         canEdit = true,
         isPinned = true,
         likes = Likes(20),
-        date = currentDate
+        date = currentDate,
+        attachments = null
     )
 
     @Before
